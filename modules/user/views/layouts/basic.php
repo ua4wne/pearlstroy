@@ -1,9 +1,9 @@
 <?php
 
-use app\assets\LoginAsset;
+use app\assets\AppAsset;
 use yii\helpers\Html;
 
-LoginAsset::register($this);
+AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!doctype html>
@@ -21,9 +21,9 @@ LoginAsset::register($this);
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/">
-                    <?= Html::img( '@web/images/logo.jpg', $options = ['alt'=>'Малоэтажная страна'] ) ?>
+                    <?= Html::img( '@web/images/logo.png', $options = ['alt'=>'Жемчужина строительства'] ) ?>
                 </a>
-                <p class="navbar-text">Малоэтажная страна</p>
+                <p class="navbar-text">Жемчужина строительства</p>
             </div>
         </div>
     </nav>

@@ -13,6 +13,7 @@ use Yii;
  */
 class DefaultController extends Controller
 {
+    public $layout = '@app/modules/main/views/layouts/cms.php';
     public function behaviors()
     {
         return [

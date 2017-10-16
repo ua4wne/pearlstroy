@@ -736,16 +736,16 @@ blockquote span {
 #filters a {
     color: #fff;
     padding: 5px 10px 5px 10px;
-    color: #044269;
-    border: solid 1px #044269;
+    color: #555;
+    border: solid 1px #554627;
     text-decoration: none
 }
 #filters a:hover {
-    border: solid 1px #044269
+    border: solid 1px #554627
 }
 #filters a.selected {
-    background: #044269;
-    border: solid 1px #044269;
+    background: #555;
+    border: solid 1px #554627;
     color: #FFF
 }
 .isotope-item {

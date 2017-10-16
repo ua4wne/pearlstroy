@@ -50,7 +50,7 @@ AppAsset::register($this);
                     </li>
                     <li><a href="/#service">Услуги</a></li>
                     <li><a href="/contact#message">Заявка</a></li>
-                    <li><a href="/main/portfolio">Портфолио</a></li>
+                    <li><a href="/main/portfolios">Портфолио</a></li>
                     <li><a href="/contact">Контакты</a></li>
                 </ul>
             </div>
@@ -94,14 +94,7 @@ AppAsset::register($this);
                 &copy; 2017 Construction - бесплатный строительный шаблон | <a href="http://html6.com.ru">Шаблоны сайтов</a>
             </div>
             <div class="span6">
-                <nav>
-                    <ul>
-                        <li><a href="#">Главная</a></li>
-                        <li><a href="#">О компании</a></li>
-                        <li><a href="#">Услуги</a></li>
-                        <li><a href="#">Связь</a></li>
-                    </ul>
-                </nav>
+                Чавой та тут еще
             </div>
         </div>
     </div>

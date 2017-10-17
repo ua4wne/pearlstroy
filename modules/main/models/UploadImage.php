@@ -7,11 +7,13 @@ use yii\web\UploadedFile;
 class UploadImage extends Model{
 
     public $image;
+    public $new_image;
 
     public function rules(){
         return[
             [['image'], 'required', 'message' => 'Не выбран файл!'],
             [['image'], 'file', 'extensions' => 'png, jpg', 'maxSize' => 1048576], //не более 1Мб!!!
+            [['new_image'], 'file', 'extensions' => 'png, jpg', 'maxSize' => 1048576], //не более 1Мб!!!
         ];
     }
 
@@ -27,7 +29,8 @@ class UploadImage extends Model{
     public function attributeLabels()
     {
         return [
-            'image' => 'Файл изображения'
+            'image' => 'Файл изображения',
+            'new_image' => 'Новый файл изображения'
         ];
     }
 }

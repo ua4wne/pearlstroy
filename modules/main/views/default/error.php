@@ -1,27 +1,21 @@
 <?php
-
-/* @var $this yii\web\View */
-/* @var $name string */
-/* @var $message string */
-/* @var $exception Exception */
-
 use yii\helpers\Html;
 
-$this->title = $name;
-?>
-<div class="site-error">
+$this->title = 'Ошибка';
 
-    <h1><?= Html::encode($this->title) ?></h1>
+$exception = Yii::$app->errorHandler->exception;
+if ($exception !== null) {
+    $statusCode = $exception->statusCode;
+    //$name = $exception->getName();
+    $message = $exception->getMessage();
+}?>
 
-    <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
-    </div>
-
-    <p>
-        The above error occurred while the Web server was processing your request.
-    </p>
-    <p>
-        Please contact us if you think this is a server error. Thank you.
-    </p>
-
+<div class="content">
+    <h2>Ой</h2>
+    <?php if($statusCode!=404) : ?>
+        <img src="/images/ops.jpg" alt="oops">
+    <?php else : ?>
+        <img src="/images/smile.png" alt="404">
+    <?php endif; ?>
+    <h2><?=$message ?></h2>
 </div>

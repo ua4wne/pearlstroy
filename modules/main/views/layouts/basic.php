@@ -91,10 +91,7 @@ AppAsset::register($this);
     <div class="container">
         <div class="row">
             <div class="span6">
-                &copy; 2017 Construction - бесплатный строительный шаблон | <a href="http://html6.com.ru">Шаблоны сайтов</a>
-            </div>
-            <div class="span6">
-                Чавой та тут еще
+                &copy; 2017 Жемчужина строительства
             </div>
         </div>
     </div>

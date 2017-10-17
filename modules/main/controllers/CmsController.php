@@ -39,9 +39,4 @@ class CmsController extends Controller
     {
         return $this->render('index');
     }
-
-    public function actionPortfolio(){
-        return 'Portfolio';
-    }
-
 }

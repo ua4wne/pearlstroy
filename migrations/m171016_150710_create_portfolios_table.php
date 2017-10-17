@@ -18,7 +18,7 @@ class m171016_150710_create_portfolios_table extends Migration
 
         $this->createTable('portfolios', [
             'id' => $this->primaryKey(),
-            'name' => $this->string(200)->notNull(),
+            'name' => $this->string(100)->notNull(),
             'text' => $this->string(100)->notNull(),
             'images' => $this->string(100)->notNull(),
             'filter' => $this->string(30)->unique()->notNull(),

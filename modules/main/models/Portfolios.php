@@ -32,9 +32,9 @@ class Portfolios extends BaseModel
     public function rules()
     {
         return [
-            [['name', 'text', 'images', 'filter'], 'required'],
+            [['name', 'text', 'filter'], 'required'],
             [['created_at', 'updated_at'], 'safe'],
-            [['name'], 'string', 'max' => 200],
+            [['name'], 'string', 'max' => 100],
             [['text', 'images'], 'string', 'max' => 100],
             [['filter'], 'string', 'max' => 30],
             [['filter'], 'unique'],
@@ -48,7 +48,7 @@ class Portfolios extends BaseModel
     {
         return [
             'id' => 'ID',
-            'name' => 'Наименование',
+            'name' => 'Заголовок',
             'text' => 'Описание',
             'images' => 'Картинка',
             'filter' => 'Фильтр',

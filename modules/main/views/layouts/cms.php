@@ -23,7 +23,7 @@ AppAsset::register($this);
                 <a class="navbar-brand" href="/">
                     <?= Html::img( '@web/images/logo.png', $options = ['alt'=>'Жемчужина строительства'] ) ?>
                 </a>
-                <p class="navbar-text">Система управления контентом сайта</p>
+                <p class="navbar-text">Жемчужина строительства</p>
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
@@ -53,10 +53,10 @@ AppAsset::register($this);
             </ul>
         </div>
     </nav>
-    <div class="wrap">
-        <div class="container">
+    <div class="container">
+        <div class="content">
             <p>
-                <a class="btn btn-primary" href="/main/cms/portfolio" role="button">Портфолио</a>
+                <a class="btn btn-primary" href="/main/cmscontent/portfolio" role="button">Портфолио</a>
             </p>
             <?= $content ?>
 

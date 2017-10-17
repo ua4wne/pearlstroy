@@ -103,11 +103,10 @@ AppAsset::register($this);
                         <div class="inner">
                             <h1>Контакты</h1>
                             <div class="slider-text">
-                                <div><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> +7(499)948-20-35</div>
                                 <div><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> +7(916)423-24-72</div>
                                 <div><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> aleynikov@inbox.ru</i></div>
 
-                                Мы работаем ПН - ПТ с 09:00 до 21:00
+                                Мы работаем ПН - ПТ<br>с 09:00 до 21:00
                             </div>
                             <a href="/contact" class="btn btn-primary">Подробнее</a>
                         </div>
@@ -155,10 +154,7 @@ AppAsset::register($this);
     <div class="container">
         <div class="row">
             <div class="span6">
-                &copy; 2017 Construction - бесплатный строительный шаблон | <a href="http://html6.com.ru">Шаблоны сайтов</a>
-            </div>
-            <div class="span6">
-                Чавой та тут еще
+                &copy; 2017 Жемчужина строительства
             </div>
         </div>
     </div>

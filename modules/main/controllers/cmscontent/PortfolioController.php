@@ -85,18 +85,18 @@ class PortfolioController extends Controller
             $upload->upload();
             //обновляем данные картинки
             $model->images = '/images/'.$upload->image->name;
-            $model->save();
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            $filter = ['design'=>'Строительство и реконструкция', 'apartments'=>'Отделка квартир', 'cottages'=>'Коттеджи', 'network'=>'Инженерные сети'];
-            $def = 'design';
-            return $this->render('create', [
-                'model' => $model,
-                'upload' => $upload,
-                'filter' => $filter,
-                'def' => $def
-            ]);
+            if($model->save())
+                return $this->redirect(['view', 'id' => $model->id]);
         }
+
+        $filter = ['design'=>'Строительство и реконструкция', 'apartments'=>'Отделка квартир', 'cottages'=>'Коттеджи', 'network'=>'Инженерные сети'];
+        $def = 'design';
+        return $this->render('create', [
+            'model' => $model,
+            'upload' => $upload,
+            'filter' => $filter,
+            'def' => $def
+        ]);
     }
 
     /**

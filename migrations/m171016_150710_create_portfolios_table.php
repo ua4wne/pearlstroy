@@ -21,7 +21,7 @@ class m171016_150710_create_portfolios_table extends Migration
             'name' => $this->string(100)->notNull(),
             'text' => $this->string(100)->notNull(),
             'images' => $this->string(100)->notNull(),
-            'filter' => $this->string(30)->unique()->notNull(),
+            'filter' => $this->string(30)->notNull(),
             'created_at' => $this->dateTime()->notNull(),
             'updated_at' => $this->dateTime()->notNull(),
         ], $tableOptions);

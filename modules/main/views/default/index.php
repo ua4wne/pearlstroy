@@ -104,6 +104,15 @@ $this->title = 'Жемчужина строительства';
                     </div>
                     <!-- ourservice item close -->
                 </li>
+                <li class="span3">
+                    <!-- ourservice item begin -->
+                    <div class="span3 ourservice-item">
+                        <a rel="cert_group" class="fancyimage" data-fancybox-group="group" href="images/sertificate/9.jpg">
+                            <img src="images/sertificate/9.jpg" alt="cpo">
+                        </a>
+                    </div>
+                    <!-- ourservice item close -->
+                </li>
             </ul>
         </section>
         <hr>

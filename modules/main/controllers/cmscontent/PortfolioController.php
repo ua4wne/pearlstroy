@@ -29,6 +29,15 @@ class PortfolioController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['adminTask']
+                    ],
+                ],
+            ],
         ];
     }
 
@@ -44,6 +53,9 @@ class PortfolioController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'pagination' => [
+                'pageSize' => Yii::$app->params['page_size'],
+            ],
         ]);
     }
 
@@ -73,18 +85,18 @@ class PortfolioController extends Controller
             $upload->upload();
             //обновляем данные картинки
             $model->images = '/images/'.$upload->image->name;
-            $model->save();
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            $filter = ['design'=>'Строительство и реконструкция', 'apartments'=>'Отделка квартир', 'cottages'=>'Коттеджи', 'network'=>'Инженерные сети'];
-            $def = 'design';
-            return $this->render('create', [
-                'model' => $model,
-                'upload' => $upload,
-                'filter' => $filter,
-                'def' => $def
-            ]);
+            if($model->save())
+                return $this->redirect(['view', 'id' => $model->id]);
         }
+
+        $filter = ['design'=>'Строительство и реконструкция', 'apartments'=>'Отделка квартир', 'cottages'=>'Коттеджи', 'network'=>'Инженерные сети'];
+        $def = 'design';
+        return $this->render('create', [
+            'model' => $model,
+            'upload' => $upload,
+            'filter' => $filter,
+            'def' => $def
+        ]);
     }
 
     /**
@@ -96,12 +108,24 @@ class PortfolioController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        $upload = new UploadImage();
+        if ($model->load(Yii::$app->request->post()) ) {
+            $upload->image = UploadedFile::getInstance($upload, 'new_image');
+            if(!empty($upload->image)){
+                //обновляем данные картинки
+                $model->images = '/images/'.$upload->image->name;
+                $upload->upload();
+            }
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
+            $filter = ['design'=>'Строительство и реконструкция', 'apartments'=>'Отделка квартир', 'cottages'=>'Коттеджи', 'network'=>'Инженерные сети'];
+            $def = $model->filter;
             return $this->render('update', [
                 'model' => $model,
+                'upload' => $upload,
+                'filter' => $filter,
+                'def' => $def
             ]);
         }
     }

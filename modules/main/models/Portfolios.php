@@ -37,7 +37,6 @@ class Portfolios extends BaseModel
             [['name'], 'string', 'max' => 100],
             [['text', 'images'], 'string', 'max' => 100],
             [['filter'], 'string', 'max' => 30],
-            [['filter'], 'unique'],
         ];
     }
 

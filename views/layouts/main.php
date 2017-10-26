@@ -154,7 +154,13 @@ AppAsset::register($this);
     <div class="container">
         <div class="row">
             <div class="span6">
-                &copy; 2017 Жемчужина строительства
+                &copy; 2017 Жемчужина строительства <!-- Yandex.Metrika informer -->
+                <a href="https://metrika.yandex.ru/stat/?id=46415820&amp;from=informer"
+                   target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/46415820/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+                                                       style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" class="ym-advanced-informer" data-cid="46415820" data-lang="ru" /></a>
+                <!-- /Yandex.Metrika informer -->
+                <noscript><div><img src="https://mc.yandex.ru/watch/46415820" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+                <!-- /Yandex.Metrika counter -->
             </div>
         </div>
     </div>
